@@ -2,6 +2,12 @@ import discord_rpc
 import time
 from win32gui import GetWindowText, GetForegroundWindow
 
+
+#To change
+id = "Your app id goes here"
+#End of to change
+
+
 if __name__ == '__main__':
     def readyCallback(current_user):
         print('Our user: {}'.format(current_user))
@@ -22,7 +28,7 @@ if __name__ == '__main__':
         'disconnected': disconnectedCallback,
         'error': errorCallback,
     }
-    discord_rpc.initialize('877507145413849119', callbacks=callbacks, log=False)
+    discord_rpc.initialize(id, callbacks=callbacks, log=False)
 
     i = 0
     start = time.time()
@@ -30,7 +36,7 @@ if __name__ == '__main__':
         rpcapp = GetWindowText(GetForegroundWindow())
         rpcapp.replace("*", "")
         if rpcapp == "Task View":
-            rpcapp == "Widok zadań"
+            rpcapp == "Task Viev"
         if rpcapp == "C:\WINDOWS\system32\cmd.exe":
             rpcapp = "Windows Command Procesor"
 
