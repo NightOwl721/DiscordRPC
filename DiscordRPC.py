@@ -10,7 +10,7 @@ id = "Your app id goes here"
 
 if __name__ == '__main__':
     def readyCallback(current_user):
-        print('Our user: {}'.format(current_user))
+        print('User: {}'.format(current_user))
 
     def disconnectedCallback(codeno, codemsg):
         print('Disconnected from Discord rich presence RPC. Code {}: {}'.format(
@@ -22,7 +22,7 @@ if __name__ == '__main__':
             errno, errmsg
         ))
 
-    # Note: 'event_name': callback
+    
     callbacks = {
         'ready': readyCallback,
         'disconnected': disconnectedCallback,
@@ -45,7 +45,7 @@ if __name__ == '__main__':
                 
                 'details': 'Apka: ' + rpcapp,
                 'start_timestamp': start,
-                'large_image_key': 'sowa'
+                'large_image_key': 'defalut'
             }
         )
 
